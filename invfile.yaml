@@ -1,0 +1,46 @@
+all:
+  hosts:
+    44.211.53.63:
+    44.202.141.64:
+    107.22.156.183:
+   
+  children:
+    pub:
+     hosts:
+       server01:
+         ansible_port: 22
+         ansible_host: 44.211.53.63
+         ansible_user: ubuntu
+         ansible_ssh_private_key_file: /etc/ansible/SecOps-Key.pem 
+       server02:
+         ansible_port: 22
+         ansible_host: 44.202.141.64
+         ansible_user: ubuntu
+         ansible_ssh_private_key_file: /etc/ansible/SecOps-Key.pem
+       server03:
+         ansible_port: 22
+         ansible_host: 107.22.156.183
+         ansible_user: ubuntu
+         ansible_ssh_private_key_file: /etc/ansible/SecOps-Key.pem
+    pvt:
+     hosts:
+       testserver01:
+         ansible_port: 22
+         ansible_host: 10.37.1.13
+         ansible_user: ubuntu
+         ansible_ssh_private_key_file: /etc/ansible/SecOps-Key.pem
+       testserver02:
+         ansible_port: 22
+         ansible_host: 10.37.2.66
+         ansible_user: ubuntu
+         ansible_ssh_private_key_file: /etc/ansible/SecOps-Key.pem 
+       testserver03:
+         ansible_port: 22
+         ansible_host: 10.37.3.63
+         ansible_user: ubuntu
+         ansible_ssh_private_key_file: /etc/ansible/SecOps-Key.pem
+    pip:
+     hosts:
+       44.211.53.63:
+       44.202.141.64:
+       107.22.156.183:
