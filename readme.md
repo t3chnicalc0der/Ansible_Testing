@@ -1,7 +1,6 @@
 Documentation
 
 
-
 Problems faced in the project:
 
 🚫 How to Remove Large Terraform Files from Git History and Prevent Future Commits
