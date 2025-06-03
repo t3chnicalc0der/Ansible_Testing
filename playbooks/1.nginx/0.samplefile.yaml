@@ -3,7 +3,7 @@
 - name: Playbook to install generic tools
   hosts: pvt 
   gather_facts: yes
-  become_user: root  #doing in root mode not admin
+  become: yes  #doing in root mode not admin
   vars: 
     TFROM: 1.8.5
   tasks:
